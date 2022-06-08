@@ -1,0 +1,84 @@
+
+user@DESKTOP-AAN10G3 MINGW32 ~
+$ cd sample
+bash: cd: sample: No such file or directory
+
+user@DESKTOP-AAN10G3 MINGW32 ~
+$ mkdir sample
+
+user@DESKTOP-AAN10G3 MINGW32 ~
+$ cd sample
+
+user@DESKTOP-AAN10G3 MINGW32 ~/sample
+$ git init
+Initialized empty Git repository in C:/Users/user/sample/.git/
+
+user@DESKTOP-AAN10G3 MINGW32 ~/sample (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+user@DESKTOP-AAN10G3 MINGW32 ~/sample (master)
+$  git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'origin'
+
+user@DESKTOP-AAN10G3 MINGW32 ~/sample (master)
+$ git push -v
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+user@DESKTOP-AAN10G3 MINGW32 ~/sample (master)
+$ git push sample
+error: src refspec refs/heads/master does not match any
+error: failed to push some refs to 'sample'
+
+user@DESKTOP-AAN10G3 MINGW32 ~/sample (master)
+$ git push -all
+error: did you mean `--all` (with two dashes)?
+
+user@DESKTOP-AAN10G3 MINGW32 ~/sample (master)
+$ git push --all
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+user@DESKTOP-AAN10G3 MINGW32 ~/sample (master)
+$ git remote add sample https://github.com/divyawani07/test_demo.git
+
+user@DESKTOP-AAN10G3 MINGW32 ~/sample (master)
+$ git push sample
+error: src refspec refs/heads/master does not match any
+error: failed to push some refs to 'https://github.com/divyawani07/test_demo.git'
+
+user@DESKTOP-AAN10G3 MINGW32 ~/sample (master)
+$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=sample/<branch> master
+
+
+user@DESKTOP-AAN10G3 MINGW32 ~/sample (master)
+$
